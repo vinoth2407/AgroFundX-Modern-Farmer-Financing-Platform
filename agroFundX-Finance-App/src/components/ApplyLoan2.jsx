@@ -9,7 +9,7 @@ const Apply_Loan2 = () => {
   const navigate =useNavigate();
     const hello =() =>{
         console.log(apply)
-        navigate('/Apply_Loan')
+        navigate('/loan')
     }
   return (
     <>

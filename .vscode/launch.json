@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AgrofundxApplication<agrofundx>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.agrofundx.AgrofundxApplication",
+            "projectName": "agrofundx",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

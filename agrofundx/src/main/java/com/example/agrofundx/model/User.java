@@ -30,6 +30,7 @@ public class User implements UserDetails {
     private Long id;
     private String name;
     private String email;
+    private String phoneNumber;
     private String password;
 
     @Enumerated(EnumType.STRING)
@@ -50,6 +51,8 @@ public class User implements UserDetails {
         return password;
     }
 
+   
+
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -69,4 +72,6 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    
 }

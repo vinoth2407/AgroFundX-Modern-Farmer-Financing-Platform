@@ -32,4 +32,5 @@ public class LoanApplication
     private String applicantSalary;
     private String loanAmountRequired;
     private String loanRepaymentMonths;
+    private String loanStatus;
 }

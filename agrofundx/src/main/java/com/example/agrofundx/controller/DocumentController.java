@@ -21,14 +21,14 @@ public class DocumentController {
 	@Autowired
 	private DocumentService service;
 
-	@PostMapping
+	@PostMapping("/{email}")
 	public ResponseEntity<?> uploadImage(@RequestParam("image")MultipartFile file) throws IOException {
 		String uploadImage = service.uploadImage(file);
 		return ResponseEntity.status(HttpStatus.OK)
 				.body(uploadImage);
 	}
 
-	@GetMapping("/{fileName}")
+	@GetMapping("/{email}")
 	public ResponseEntity<?> downloadImage(@PathVariable String fileName){
 		byte[] imageData=service.downloadImage(fileName);
 		return ResponseEntity.status(HttpStatus.OK)

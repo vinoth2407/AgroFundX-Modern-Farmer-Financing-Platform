@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 
+
+
 @RestController
 public class LoanController {
 
@@ -27,10 +29,9 @@ public class LoanController {
         return service.addLoan(loanapplicant);
     }
 
-    @GetMapping("/get")
+    @GetMapping("/getloan")
     public List<LoanApplication> read() {
         return service.readLoan();
     }
-    
     
 }

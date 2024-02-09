@@ -14,8 +14,6 @@ import com.example.agrofundx.service.AuthenticationService;
 
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.web.bind.annotation.PathVariable;
-
 
 @RestController
 @RequestMapping("/api/v1/auth")
@@ -32,6 +30,10 @@ public class AuthenticationController {
     @PostMapping("/authenticate")
     public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request) {
         return ResponseEntity.ok(authenticationService.authenticate(request));
+    }
+    @PostMapping("/loginAdmin")
+    public ResponseEntity<AuthenticationResponse> loginAdmin(@RequestBody AuthenticationRequest request) {
+        return ResponseEntity.ok(authenticationService.loginAdmin(request));
     }
     
    
